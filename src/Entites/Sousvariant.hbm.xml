@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2019 19:30:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Sousvariant" table="sousvariant" catalog="suivideproduction" optimistic-lock="version">
+        <id name="nomSousVariant" type="string">
+            <column name="nom_sous_variant" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="variant" class="Entites.Variant" fetch="select">
+            <column name="Num_serieVariant" not-null="true" />
+        </many-to-one>
+        <property name="numSerieSousVariant" type="string">
+            <column name="Num_serieSousVariant" not-null="true" />
+        </property>
+        <property name="nomVariant" type="string">
+            <column name="nom_variant" not-null="true" />
+        </property>
+        <property name="quantite" type="int">
+            <column name="quantite" not-null="true" />
+        </property>
+        <property name="codeBarre" type="int">
+            <column name="code_Barre" not-null="true" />
+        </property>
+        <property name="dateEditionOrdre" type="timestamp">
+            <column name="date_editionOrdre" length="19" not-null="true" />
+        </property>
+        <property name="datePrevu" type="timestamp">
+            <column name="date_prevu" length="19" not-null="true" />
+        </property>
+        <property name="statut" type="string">
+            <column name="statut" not-null="true" />
+        </property>
+        <set name="etapes" table="etape" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="nom_sous_variant" not-null="true" />
+            </key>
+            <one-to-many class="Entites.Etape" />
+        </set>
+    </class>
+</hibernate-mapping>

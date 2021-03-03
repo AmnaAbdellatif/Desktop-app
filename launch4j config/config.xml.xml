@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\App_02_04_19\dist\ApplicationSuiviProduction.jar</jar>
+  <outfile>C:\App_02_04_19\dist\Gestion et Suivi de Production.exe</outfile>
+  <errTitle>Please install java first</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\App_02_04_19\src\iconfinder-laptopwithcode-4417093_116630.ico</icon>
+  <singleInstance>
+    <mutexName>Gestion_Et_Suivi_Production</mutexName>
+    <windowTitle>Gestion Et_Suivi Production</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.0.0.0</txtFileVersion>
+    <fileDescription>Gestion et suivi Software</fileDescription>
+    <copyright>NIL</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1.0.0.0</txtProductVersion>
+    <productName>Gestion et suivi Production</productName>
+    <companyName>Genuine Coder</companyName>
+    <internalName>Gestion et suivi Production</internalName>
+    <originalFilename>Gestion et Suivi  de Production.exe</originalFilename>
+  </versionInfo>
+</launch4jConfig>

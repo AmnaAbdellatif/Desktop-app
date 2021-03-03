@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="imprimepage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.OrdreDeFabricationController">
+   <children>
+      <Label layoutX="224.0" layoutY="14.0" text="Ordre de fabrication" underline="true">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="86.0" prefHeight="25.0" prefWidth="218.0" text="Code barre sous variant:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="146.0" prefHeight="33.0" prefWidth="105.0" text="Date prévu:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdate" layoutX="456.0" layoutY="150.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="18.0" layoutY="203.0" prefHeight="33.0" prefWidth="105.0" text="Nom projet:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnomproj" disable="true" editable="false" layoutX="124.0" layoutY="207.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="336.0" layoutY="203.0" prefHeight="33.0" prefWidth="113.0" text="Numero serie:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumproj" disable="true" editable="false" layoutX="456.0" layoutY="207.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="14.0" layoutY="256.0" prefHeight="33.0" prefWidth="113.0" text="Nom variant:" textFill="#6b83a4">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnomvar" disable="true" editable="false" layoutX="124.0" layoutY="264.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="336.0" layoutY="260.0" prefHeight="33.0" prefWidth="113.0" text="Numero serie:" textFill="#6b83a4">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumvar" disable="true" editable="false" layoutX="456.0" layoutY="260.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="11.0" layoutY="322.0" prefHeight="33.0" prefWidth="129.0" text="Nom sous variant:" textFill="#bf2424">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnomsousvar" disable="true" editable="false" layoutX="133.0" layoutY="326.0" prefHeight="25.0" prefWidth="218.0" />
+      <Label layoutX="359.0" layoutY="323.0" prefHeight="33.0" prefWidth="113.0" text="Numero serie:" textFill="#bf2424">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="twtnumsousvar" disable="true" editable="false" layoutX="456.0" layoutY="326.0" prefHeight="25.0" prefWidth="121.0" />
+      <Label layoutX="14.0" layoutY="381.0" prefHeight="33.0" prefWidth="92.0" text="Quantite:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="twtQTE" disable="true" editable="false" layoutX="124.0" layoutY="389.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="336.0" layoutY="381.0" prefHeight="33.0" prefWidth="113.0" text="Responsable:">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtresponsable" disable="true" editable="false" layoutX="449.0" layoutY="385.0" prefHeight="25.0" prefWidth="135.0" />
+      <Label layoutX="14.0" layoutY="146.0" prefHeight="33.0" prefWidth="58.0" text="Date :">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdate1" layoutX="121.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button fx:id="btnimprimer" layoutX="534.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnimprimerAction" style="-fx-background-color: #6b83a4;" text="Imprimer" textFill="#110c0c" />
+      <TextField fx:id="txtcodebarre" editable="false" layoutX="211.0" layoutY="86.0" prefHeight="25.0" prefWidth="316.0" />
+      <TableView fx:id="tablecomposant" layoutX="18.0" layoutY="438.0" prefHeight="197.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="colonneNUMetape" prefWidth="99.0" text="Numero Etape" />
+          <TableColumn fx:id="colonneNometape" prefWidth="179.0" text="Nom etape" />
+            <TableColumn fx:id="colonneNumcompo" prefWidth="128.0" text="Numero composant" />
+            <TableColumn fx:id="colonneNomcompo" prefWidth="152.0" text="Nom composant" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnsave" layoutX="440.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnsaveAction" style="-fx-background-color: #6b83a4;" text="sauvegarder" textFill="#110c0c" />
+   </children>
+</AnchorPane>

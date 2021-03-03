@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2019 19:30:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Supervision" table="supervision" catalog="suivideproduction" optimistic-lock="version">
+        <id name="idSuperviseur" type="java.lang.Integer">
+            <column name="id_superviseur" />
+            <generator class="identity" />
+        </id>
+        <property name="numeroProjet" type="string">
+            <column name="numeroProjet" not-null="true" />
+        </property>
+        <property name="nomProjet" type="string">
+            <column name="nomProjet" not-null="true" />
+        </property>
+        <property name="numeroVariant" type="string">
+            <column name="numeroVariant" not-null="true" />
+        </property>
+        <property name="nomVariant" type="string">
+            <column name="nomVariant" not-null="true" />
+        </property>
+        <property name="numeroSousvariant" type="string">
+            <column name="numeroSousvariant" not-null="true" />
+        </property>
+        <property name="nomSousvariant" type="string">
+            <column name="nomSousvariant" not-null="true" />
+        </property>
+        <property name="codeBarre" type="int">
+            <column name="code_barre" not-null="true" />
+        </property>
+        <property name="quantiteDemande" type="int">
+            <column name="quantite_demande" not-null="true" />
+        </property>
+        <property name="responsable" type="string">
+            <column name="responsable" length="100" not-null="true" />
+        </property>
+        <property name="dateEditionOrdre" type="date">
+            <column name="date_editionOrdre" length="10" not-null="true" />
+        </property>
+        <property name="datePrevu" type="date">
+            <column name="date_prevu" length="10" not-null="true" />
+        </property>
+        <property name="statutEtape" type="string">
+            <column name="statutEtape" not-null="true" />
+        </property>
+        <property name="nomEtape" type="string">
+            <column name="nomEtape" not-null="true" />
+        </property>
+        <property name="quantiteProduiteEtape" type="int">
+            <column name="quantiteProduiteEtape" not-null="true" />
+        </property>
+        <property name="dateActuelleScan" type="time">
+            <column name="date_actuelleScan" length="8" not-null="true" />
+        </property>
+        <property name="dateDebutProduction" type="time">
+            <column name="date_debutProduction" length="8" not-null="true" />
+        </property>
+        <property name="statutSousvariant" type="string">
+            <column name="statut_Sousvariant" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.SuppressionController">
+   <children>
+      <TabPane layoutX="50.0" layoutY="82.0" prefHeight="509.0" prefWidth="668.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Projet">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableProjet" layoutX="94.0" layoutY="105.0" prefHeight="200.0" prefWidth="491.0">
+                          <columns>
+                            <TableColumn fx:id="colonneNumProjet" prefWidth="180.0" text="Numéro serie Projet" />
+                            <TableColumn fx:id="colonneNomprojet" minWidth="3.0" prefWidth="310.0" text="Nom projet" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="94.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table des Projets :" wrappingWidth="159.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="supprimerbuttonProjet" layoutX="523.0" layoutY="344.0" mnemonicParsing="false" onAction="#suppprojetAction" text="Supprimer" textFill="#3c4bae">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Variant">
+              <content>
+                <AnchorPane fx:id="comboboxvariant" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboboxprojet" layoutX="206.0" layoutY="36.0" onAction="#comboboxprojetAction" prefHeight="31.0" prefWidth="192.0" promptText="Selectionner un projet" />
+                        <TableView fx:id="tablevariant" layoutX="91.0" layoutY="180.0" prefHeight="147.0" prefWidth="486.0">
+                          <columns>
+                            <TableColumn fx:id="colonnenumerovariant" prefWidth="169.0" text="Numéro Variant" />
+                            <TableColumn fx:id="colonnenomvariant" prefWidth="316.0" text="Nom variant" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="supprimerbuttonvariant" layoutX="575.0" layoutY="434.0" mnemonicParsing="false" onAction="#supprimerbuttonvariantAction" text="Supprimer" textFill="#3c4bae">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Text layoutX="124.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet :" wrappingWidth="69.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numprojetvariant" disable="true" editable="false" layoutX="165.0" layoutY="88.0" />
+                        <TextField fx:id="nomprojetvariant" disable="true" editable="false" layoutX="447.0" layoutY="88.0" />
+                        <Text layoutX="322.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet:" wrappingWidth="113.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Projet:" wrappingWidth="162.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numvarianttext" disable="true" editable="false" layoutX="165.0" layoutY="129.0" />
+                        <TextField fx:id="nomvarianttext" disable="true" editable="false" layoutX="447.0" layoutY="129.0" />
+                        <Text layoutX="322.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant:" wrappingWidth="113.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="-4.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Variant:" wrappingWidth="170.9999992698431">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Sous variant">
+              <content>
+                <AnchorPane fx:id="comboprojetsousvariant" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="combosousvariant" layoutX="406.0" layoutY="29.0" onAction="#vonaction" prefHeight="25.0" prefWidth="198.0" promptText="Selectionner un variant" />
+                        <TableView fx:id="tabsousvariant" layoutX="95.0" layoutY="172.0" prefHeight="173.0" prefWidth="483.0">
+                          <columns>
+                            <TableColumn fx:id="colonnenumSV" prefWidth="145.0" text="Numéro sous variant" />
+                            <TableColumn fx:id="colonnenomSV" prefWidth="337.0" text="Nom sous variant" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="337.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variant" wrappingWidth="64.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="supprimerbuttonsousvariant" layoutX="563.0" layoutY="434.0" mnemonicParsing="false" onAction="#suppSVAction" text="Supprimer" textFill="#3c4bae">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="numvariantsv" layoutX="178.0" layoutY="69.0" />
+                        <TextField fx:id="nomseriesv" layoutX="464.0" layoutY="69.0" prefHeight="25.0" prefWidth="203.0" />
+                        <TextField fx:id="numseriesousvariant" layoutX="183.0" layoutY="111.0" />
+                        <TextField fx:id="nomsousvariant" layoutX="493.0" layoutY="111.0" prefHeight="25.0" prefWidth="161.0" />
+                        <Text layoutX="12.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Variant:" wrappingWidth="164.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="338.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant:" wrappingWidth="136.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="337.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom série Sous Variant:" wrappingWidth="155.9999992698431">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="6.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Sous Variant:" wrappingWidth="176.9999992698431">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="comboprojetsv" layoutX="135.0" layoutY="30.0" prefHeight="25.0" prefWidth="171.0" promptText="Sélectionner un projet" />
+                        <Text layoutX="63.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet" wrappingWidth="64.13671875">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="287.0" layoutY="14.0" prefHeight="43.0" prefWidth="171.0" text="Suppression">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="59.0" layoutX="461.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/supp.png" />
+         </image>
+      </ImageView>
+      <Text disable="true" layoutX="197.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supprimer Projet,Variant,Sous Variant" textAlignment="CENTER" wrappingWidth="290.1367179006338">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

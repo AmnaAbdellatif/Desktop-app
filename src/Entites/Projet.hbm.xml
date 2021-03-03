@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2019 19:30:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Projet" table="projet" catalog="suivideproduction" optimistic-lock="version">
+        <id name="numeroSerie" type="string">
+            <column name="numero_serie" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomProjet" type="string">
+            <column name="nom_projet" not-null="true" />
+        </property>
+        <set name="variants" table="variant" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="numero_serie" length="11" not-null="true" />
+            </key>
+            <one-to-many class="Entites.Variant" />
+        </set>
+    </class>
+</hibernate-mapping>

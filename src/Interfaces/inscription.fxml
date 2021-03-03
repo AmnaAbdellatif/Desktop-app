@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1393.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.InscriptionController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="318.0" prefWidth="1393.0" style="-fx-background-color: #4682B4;" />
+      <AnchorPane layoutX="-11.0" layoutY="671.0" prefHeight="33.0" prefWidth="1400.0" style="-fx-background-color: #4682B4;" />
+      <AnchorPane layoutX="417.0" layoutY="33.0" prefHeight="538.0" prefWidth="442.0" style="-fx-background-color: white; -fx-border-color: #4682B4;">
+         <children>
+            <Label layoutX="127.0" layoutY="12.0" prefHeight="57.0" prefWidth="187.0" text="  S'inscrire" textAlignment="CENTER" textFill="#393737" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="110.0" fitWidth="161.0" layoutX="146.0" layoutY="69.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/drax.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="209.0" prefHeight="20.0" prefWidth="77.0" text=" Nom :">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="259.0" prefHeight="20.0" prefWidth="77.0" text="Prénom :">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="304.0" prefHeight="20.0" prefWidth="109.0" text="Mot de passe:">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="354.0" prefHeight="20.0" prefWidth="161.0" text="Vérifier Mot de passe :">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="402.0" prefHeight="20.0" prefWidth="77.0" text="Fonction :">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textnom" layoutX="212.0" layoutY="207.0" />
+            <TextField fx:id="textprenom" layoutX="212.0" layoutY="257.0" />
+            <TextField fx:id="textmotdepasse" layoutX="212.0" layoutY="302.0" />
+            <TextField fx:id="motdepasse" layoutX="212.0" layoutY="352.0" />
+            <Button fx:id="btnValider" layoutX="336.0" layoutY="464.0" mnemonicParsing="false" onAction="#btnValiderAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #4682B4; -fx-border-color: #4682B4; -fx-border-radius: 50; -fx-text-fill: black;" text="Valider">
+               <font>
+                  <Font name="Arial Black" size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="41.0" layoutY="169.0" prefHeight="20.0" prefWidth="77.0" text="Matricule:">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txetmatricule" layoutX="212.0" layoutY="167.0" />
+            <ComboBox fx:id="combofonction" layoutX="212.0" layoutY="410.0" prefWidth="150.0" promptText="Fonction" />
+            <Label fx:id="message" layoutX="214.0" layoutY="385.0" prefHeight="17.0" prefWidth="187.0" textFill="RED" />
+            <ImageView fitHeight="69.0" fitWidth="77.0" layoutX="314.0" layoutY="55.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/s'inscrire.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

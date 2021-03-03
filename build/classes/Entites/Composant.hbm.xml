@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2019 19:30:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Composant" table="composant" catalog="suivideproduction" optimistic-lock="version">
+        <id name="numeroComposant" type="string">
+            <column name="numero_composant" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomComposant" type="string">
+            <column name="Nom_composant" not-null="true" />
+        </property>
+        <property name="nomEtape" type="string">
+            <column name="nom_etape" not-null="true" />
+        </property>
+        <property name="numeroEtape" type="string">
+            <column name="numero_etape" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

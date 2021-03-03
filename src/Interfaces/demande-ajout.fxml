@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.DemandeAjoutController">
+   <children>
+      <Text layoutX="364.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout Projet" textAlignment="CENTER" underline="true" wrappingWidth="277.13671875">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="87.0" layoutY="93.0" prefHeight="591.0" prefWidth="853.0" style="-fx-border-color: #4682B4; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Projet">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="612.0">
+                     <children>
+                        <Text layoutX="374.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom projet" textAlignment="CENTER" wrappingWidth="95.13671875">
+                           <font>
+                              <Font name="Arial Narrow" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="nom_projet" layoutX="482.0" layoutY="29.0" />
+                        <TextField fx:id="num_serie_projet" layoutX="190.0" layoutY="25.0" />
+                        <Text layoutX="60.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Projet:" wrappingWidth="128.1367189474404">
+                           <font>
+                              <Font name="Arial Narrow" size="15.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tableprojet" layoutX="111.0" layoutY="127.0" prefHeight="200.0" prefWidth="456.0">
+                          <columns>
+                            <TableColumn fx:id="numprojettable" prefWidth="108.0" text="Numéro Projet" />
+                            <TableColumn fx:id="nomprojettable" prefWidth="347.0" text="Nom Projet" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="update" layoutX="111.0" layoutY="88.0" mnemonicParsing="false" onAction="#buttonupdateonaction" prefHeight="25.0" prefWidth="68.0" text="update" />
+                        <Button fx:id="valider" layoutX="711.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleValiderButtonAction" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Valider" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Variant">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="612.0">
+                     <children>
+                        <Text layoutX="157.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="projet" textAlignment="CENTER" wrappingWidth="95.13671875">
+                           <font>
+                              <Font name="Arial Narrow" size="15.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="comboprojet" layoutX="260.0" layoutY="41.0" prefHeight="25.0" prefWidth="169.0" promptText="Selectionner un projet" />
+                        <TextField fx:id="numserievarianttext" layoutX="130.0" layoutY="284.0" />
+                        <TextField fx:id="nomvarianttext" layoutX="454.0" layoutY="284.0" />
+                        <Text layoutX="14.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Variant:" wrappingWidth="109.13671875" />
+                        <Text layoutX="327.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de Variant:" wrappingWidth="109.13671875" />
+                        <TextField fx:id="numserieprojet" layoutX="130.0" layoutY="101.0" />
+                        <TextField fx:id="nomprojet" layoutX="447.0" layoutY="101.0" />
+                        <Text layoutX="327.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet:" wrappingWidth="109.13671875" />
+                        <Text layoutX="14.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Projet:" wrappingWidth="109.13671875" />
+                        <Button fx:id="validervariant" layoutX="680.0" layoutY="500.0" mnemonicParsing="false" onAction="#handlevalidervariant" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Valider" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="listvariant" layoutX="13.0" layoutY="135.0" prefHeight="139.0" prefWidth="571.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Sous Variant ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="612.0">
+                     <children>
+                        <Text layoutX="9.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro série Variant:" wrappingWidth="122.13671875" />
+                        <TextField fx:id="numserievariant1" layoutX="137.0" layoutY="72.0" />
+                        <TextField fx:id="nomserievariant1" layoutX="469.0" layoutY="72.0" />
+                        <Text layoutX="375.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant:" wrappingWidth="83.0000047236681" />
+                        <ListView fx:id="listesousvariant" layoutX="41.0" layoutY="113.0" prefHeight="180.0" prefWidth="596.0" />
+                        <ComboBox fx:id="comboprojetsvariant" layoutX="136.0" layoutY="21.0" prefWidth="150.0" promptText="Sélectionner Projet" />
+                        <ComboBox fx:id="combovariantsvariant" layoutX="469.0" layoutY="21.0" prefWidth="150.0" promptText="Sélectionner Variant" />
+                        <Text layoutX="61.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet" textAlignment="CENTER" wrappingWidth="69.13671875" />
+                        <Text layoutX="397.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variant" textAlignment="CENTER" wrappingWidth="69.13671875" />
+                        <TextField fx:id="numsvar" layoutX="137.0" layoutY="321.0" />
+                        <TextField fx:id="nomsvar" layoutX="410.0" layoutY="321.0" />
+                        <Text layoutX="301.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom  Sous Variant:" wrappingWidth="108.0000047236681" />
+                        <Text layoutX="10.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Sous Variant:" wrappingWidth="120.0000047236681" />
+                        <Button fx:id="validersvar" layoutX="680.0" layoutY="491.0" mnemonicParsing="false" onAction="#handlesousvaar" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Valider" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="codebarre" layoutX="656.0" layoutY="320.0" />
+                        <Text layoutX="579.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code barres:" wrappingWidth="77.0000047236681" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Etapes &amp; Compsants">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="612.0">
+                     <children>
+                        <TableView fx:id="tableview1" layoutX="33.0" layoutY="245.0" prefHeight="200.0" prefWidth="713.0">
+                           <columns>
+                              <TableColumn fx:id="numserieEtape1" prefWidth="127.0" text="Numéo Série Etape" />
+                              <TableColumn fx:id="nomEtapes1" prefWidth="197.0" text="Nom Etape" />
+                              <TableColumn fx:id="numsériecomposant1" minWidth="0.0" prefWidth="175.0" text="Numéro série Composant" />
+                              <TableColumn fx:id="nomcomp1" minWidth="0.0" prefWidth="213.0" text="NomComposant" />
+                           </columns>
+                        </TableView>
+                        <ComboBox fx:id="comboetape1" layoutX="269.0" layoutY="203.0" onAction="#etapeOnAction" prefHeight="25.0" prefWidth="241.0" promptText="Sélectionner Etape Existante" />
+                        <ComboBox fx:id="comboprojetsv" layoutX="123.0" layoutY="21.0" prefWidth="150.0" promptText="sélectionner Projet" />
+                        <ComboBox fx:id="combovariantsv" layoutX="362.0" layoutY="21.0" onAction="#combovariantsvAction" prefWidth="150.0" promptText="Sélectionner Variant" />
+                        <ComboBox fx:id="combosv" layoutX="629.0" layoutY="21.0" onAction="#combosvonAction" prefHeight="25.0" prefWidth="216.0" promptText="Sélectionner Sous variant" />
+                        <Text layoutX="54.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projet" wrappingWidth="59.99999642372131">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="295.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variant" wrappingWidth="59.99999642372131">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="525.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sous Variant" wrappingWidth="103.99999642372131">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numtextsv" layoutX="221.0" layoutY="79.0" />
+                        <TextField fx:id="nomtextsv" layoutX="577.0" layoutY="79.0" prefHeight="25.0" prefWidth="252.0" />
+                        <Text layoutX="420.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Sous variant" wrappingWidth="137.9999964237213">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="54.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Serie variant" wrappingWidth="162.9999964237213">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="ajoutetap" layoutX="703.0" layoutY="494.0" mnemonicParsing="false" onAction="#handleAjouteretapButtonAction" prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Ajouter " textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text=" Compsants">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="612.0">
+                     <children>
+                        <TextField fx:id="numetape" layoutX="14.0" layoutY="111.0" prefHeight="43.0" prefWidth="164.0" />
+                        <TextField fx:id="nometape" layoutX="288.0" layoutY="111.0" prefHeight="43.0" prefWidth="247.0" />
+                        <TextField fx:id="numcomposant" layoutX="14.0" layoutY="236.0" prefHeight="43.0" prefWidth="164.0" />
+                        <TextField fx:id="nomcomposant" layoutX="290.0" layoutY="236.0" prefHeight="43.0" prefWidth="248.0" />
+                        <Button fx:id="ajoutercomposant" layoutX="609.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleAjouterButtonCMPAction" prefHeight="24.0" prefWidth="104.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Ajouter " textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="20.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Série Etape" textAlignment="CENTER" underline="true" wrappingWidth="128.13672119379044">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="301.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Etape" textAlignment="CENTER" underline="true" wrappingWidth="121.13671875">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="10.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Série composant" textAlignment="CENTER" underline="true" wrappingWidth="166.00001619756222">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="301.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom composant" textAlignment="CENTER" underline="true" wrappingWidth="148.00001619756222">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="267.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter nouvelle Etape et ses composants" wrappingWidth="349.9999964237213">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="591.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ajouter.png" />
+         </image>
+      </ImageView>
+      <Text disable="true" layoutX="377.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Projet,Variant,Sous Variant,Etapes et Composants" textAlignment="CENTER" wrappingWidth="357.1367179006338">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

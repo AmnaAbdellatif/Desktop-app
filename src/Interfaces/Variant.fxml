@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1388.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.VariantController">
+   <children>
+      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="623.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/projet...png" />
+         </image>
+      </ImageView>
+      <Button fx:id="NextButton" layoutX="1309.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleSuivantButtonAction" prefHeight="50.0" prefWidth="55.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/suivant.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="1312.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suivant">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="précedentButton1" layoutX="230.0" layoutY="584.0" mnemonicParsing="false" onAction="#handlePrecedentButtonAction" prefHeight="50.0" prefWidth="39.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/previous.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="237.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Précédent">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="65.0" prefWidth="1388.0" style="-fx-background-color: #4682B4; -fx-border-radius: 250;">
+         <children>
+            <Text layoutX="592.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRÄXLMAIER" textAlignment="CENTER" wrappingWidth="227.9999924749136">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="673.0" prefHeight="34.0" prefWidth="1388.0" style="-fx-background-color: #4682B4;">
+         <children>
+            <Button fx:id="date" mnemonicParsing="false" onAction="#dateAction" text="Date">
+               <HBox.margin>
+                  <Insets left="600.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="dateftxt" prefHeight="25.0" prefWidth="136.0">
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children></HBox>
+      <TextField fx:id="searchbox" layoutX="465.0" layoutY="234.0" onKeyReleased="#search" prefHeight="28.0" prefWidth="591.0" promptText="Rechercher un sous-variant" />
+      <ImageView fitHeight="28.0" fitWidth="42.0" layoutX="1016.0" layoutY="225.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/consulter.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="465.0" layoutY="262.0" prefHeight="181.0" prefWidth="591.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="594.0">
+               <children>
+                  <ListView fx:id="ListViewVariant" layoutX="2.0" layoutY="14.0" prefHeight="193.0" prefWidth="591.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="txtNomvariant" disable="true" editable="false" layoutX="504.0" layoutY="189.0" prefHeight="25.0" prefWidth="161.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtnumVariant" disable="true" editable="false" layoutX="855.0" layoutY="189.0" prefHeight="25.0" prefWidth="161.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <VBox layoutY="85.0" prefHeight="566.0" prefWidth="193.0" style="-fx-background-color: #4682B4;">
+         <children>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#handleAjouterButtonAction" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" top="30.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="47.0" focusTraversable="true" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/ajouter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter" wrappingWidth="61.21337890625">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="47.0" focusTraversable="true" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/modifier...png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="60.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier" wrappingWidth="68.3330078125">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#supprimerButtonAction" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="47.0" focusTraversable="true" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/delete1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="60.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supprimer" wrappingWidth="100.705078125">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="45.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="menuprincipal" mnemonicParsing="false" onAction="#handlemenuButtonAction" prefHeight="42.0" prefWidth="58.0" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets left="50.0" top="-12.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="47.0" focusTraversable="true" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/menu%20principal.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="60.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Menu principal" textAlignment="RIGHT" wrappingWidth="150.0" x="50.0">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <Hyperlink fx:id="hyperlink" onAction="#handle" prefHeight="52.0" prefWidth="67.0">
+               <VBox.margin>
+                  <Insets left="53.0" top="20.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="handle" fitHeight="43.0" fitWidth="56.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/lien.png" />
+                     </image>
+                    
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Hyperlink>
+            <Text layoutX="60.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Site Officiel">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="43.0" top="15.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <Text disable="true" layoutX="644.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Planning:" textAlignment="CENTER" wrappingWidth="181.0000021867454">
+         <font>
+            <Font name="Cambria Bold" size="33.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNomvprojet" disable="true" editable="false" layoutX="504.0" layoutY="156.0" prefHeight="25.0" prefWidth="161.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <Text layoutX="375.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet :" wrappingWidth="100.70506536960602">
+         <font>
+            <Font name="Book Antiqua Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="681.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Série Variant :" wrappingWidth="181.00000636279583">
+         <font>
+            <Font name="Book Antiqua Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="375.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant :" wrappingWidth="116.13671875">
+         <font>
+            <Font name="Book Antiqua Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNumprojet" disable="true" editable="false" layoutX="855.0" layoutY="156.0" prefHeight="25.0" prefWidth="161.0" />
+      <Text layoutX="681.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Série Projet :" wrappingWidth="159.13671875">
+         <font>
+            <Font name="Book Antiqua Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="683.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélection Sous Variant" wrappingWidth="193.00000309944153">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="460.0" layoutY="476.0" prefHeight="28.0" prefWidth="193.0" text="Numéro série Sousvariant" underline="true">
+         <font>
+            <Font name="Book Antiqua Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="476.0" prefHeight="28.0" prefWidth="193.0" text="Nom Sousvariant:" underline="true">
+         <font>
+            <Font name="Book Antiqua Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumsousvar" layoutX="460.0" layoutY="506.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="txtnomsousvar" layoutX="809.0" layoutY="506.0" prefHeight="25.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>

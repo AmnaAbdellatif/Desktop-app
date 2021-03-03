@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.DemandeDeModificationController">
+   <children>
+      <Text layoutX="241.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification" textAlignment="CENTER" underline="true" wrappingWidth="277.13671875">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="471.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/modifier.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="41.0" layoutY="91.0" prefHeight="489.0" prefWidth="897.0" style="-fx-border-color: #4682B4; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Projet">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="602.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Projet :" wrappingWidth="90.00001350045204" />
+                        <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet :" wrappingWidth="90.00001350045204">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="TextNumProj" disable="true" editable="false" layoutX="14.0" layoutY="39.0" />
+                        <TextField fx:id="TextNomProj" layoutX="14.0" layoutY="109.0" />
+                        <Button fx:id="charger1" layoutX="14.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleupdateButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Enregistrer" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tableProjet" layoutX="218.0" layoutY="52.0" prefHeight="200.0" prefWidth="363.0">
+                          <columns>
+                            <TableColumn fx:id="numProjet" prefWidth="158.0" text="Numéro Projet" />
+                            <TableColumn fx:id="nomProjet" prefWidth="204.0" text="Nom Projet" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="actualiser" layoutX="118.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleactualiserAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Actualiser" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Variant">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="ComboProjet" layoutX="226.0" layoutY="28.0" onAction="#ComboboxonAction" prefHeight="25.0" prefWidth="164.0" promptText="Selectionner un projet" />
+                        <Text layoutX="126.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Projet :" textAlignment="CENTER" wrappingWidth="90.00001350045204">
+                           <font>
+                              <Font name="Angsana New Bold Italic" size="21.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tablevariant" editable="true" layoutX="75.0" layoutY="163.0" prefHeight="200.0" prefWidth="511.0">
+                          <columns>
+                            <TableColumn fx:id="numvariant" prefWidth="204.0" text="Numéro Variant" />
+                            <TableColumn fx:id="nomvariant" prefWidth="306.0" text="Nom Variant" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="numeroProjet" disable="true" editable="false" layoutX="152.0" layoutY="87.0" />
+                        <Text layoutX="23.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Projet" wrappingWidth="103.0869140625">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="nomdeProjet" layoutX="457.0" layoutY="87.0" prefHeight="25.0" prefWidth="154.0" />
+                        <Text layoutX="324.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet" wrappingWidth="103.0869140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numerovariant" disable="true" editable="false" layoutX="135.0" layoutY="120.0" prefHeight="25.0" prefWidth="183.0" />
+                        <TextField fx:id="nomdevariant" layoutX="437.0" layoutY="120.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Text layoutX="324.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant" wrappingWidth="103.0869140625">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="23.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Variant" wrappingWidth="103.0869140625">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="Enregistrer" layoutX="451.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleenregistrerButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Enregistrer" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="actualiser1" layoutX="556.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleactualiserButtonAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Actualiser" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Sous Variant">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="numsvariant" layoutX="166.0" layoutY="111.0" prefHeight="25.0" prefWidth="153.0" />
+                        <TextField fx:id="nomsvariant" disable="true" editable="false" layoutX="468.0" layoutY="111.0" prefHeight="25.0" prefWidth="241.0" />
+                        <Text layoutX="14.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Sous Variant">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="343.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Sous Variant">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="ComboSVariant" layoutX="373.0" layoutY="21.0" onAction="#combovariant" prefHeight="25.0" prefWidth="171.0" promptText="selectionner un  variant" />
+                        <Text layoutX="273.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom variant">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="numvariant1" disable="true" editable="false" layoutX="168.0" layoutY="71.0" />
+                        <TextField fx:id="textnomvariant" layoutX="468.0" layoutY="70.0" prefHeight="25.0" prefWidth="146.0" />
+                        <Text layoutX="343.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Variant" wrappingWidth="90.00001350045204">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="14.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Variant">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="save" layoutX="458.0" layoutY="377.0" mnemonicParsing="false" onAction="#handlesaveButtonAction" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Enregistrer" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="save1" layoutX="557.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleActualiserButtonActionsvariant" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #4#B0C4DE82B4; -fx-border-radius: 15;" text="Actualiser" textFill="#326e69">
+                           <font>
+                              <Font name="Arial Black" size="11.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="8.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Projet">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="ComboPRojet" layoutX="95.0" layoutY="21.0" prefHeight="25.0" prefWidth="164.0" promptText="selectionner un  projet" />
+                        <TableView fx:id="tableSV" layoutX="111.0" layoutY="160.0" prefHeight="200.0" prefWidth="546.0">
+                          <columns>
+                            <TableColumn fx:id="numSV" prefWidth="159.0" text="Numero serie sous variant" />
+                            <TableColumn fx:id="nomSV" prefWidth="386.0" text="Nom sous variant" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text disable="true" layoutX="231.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Projet,Variant,Sous Variant" textAlignment="CENTER" wrappingWidth="339.1367179006338">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

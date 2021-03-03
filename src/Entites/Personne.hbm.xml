@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7 juin 2019 19:30:34 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entites.Personne" table="personne" catalog="suivideproduction" optimistic-lock="version">
+        <id name="matricule" type="string">
+            <column name="Matricule" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="Nom" length="65535" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="Prenom" length="65535" not-null="true" />
+        </property>
+        <property name="fonction" type="string">
+            <column name="Fonction" not-null="true" />
+        </property>
+        <property name="motDePasse" type="string">
+            <column name="Mot_de_passe" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
